@@ -15,7 +15,7 @@ public class BounceCraft3ModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         FluidRenderHandlerRegistry.INSTANCE.register(BCFluids.BOUNCIUM, BCFluids.BOUNCIUM_FLOWING,
-            new SimpleFluidRenderHandler(id("block/bouncium_still"), id("block/bouncium_moving")));
+            new SimpleFluidRenderHandler(id("block/bouncium_still"), id("block/bouncium_flowing")));
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), BCFluids.BOUNCIUM,
             BCFluids.BOUNCIUM_FLOWING);
