@@ -61,6 +61,11 @@ public abstract class BounciumFluid extends FlowableFluid {
     }
 
     @Override
+    public Item getBucketItem() {
+        return BCItems.BOUNCIUM_BUCKET;
+    }
+
+    @Override
     protected boolean isInfinite(World world) {
         return false;
     }
@@ -82,11 +87,6 @@ public abstract class BounciumFluid extends FlowableFluid {
     }
 
     @Override
-    public Item getBucketItem() {
-        return BCItems.BOUNCIUM_BUCKET;
-    }
-
-    @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid,
                                         Direction direction) {
         return false;
@@ -105,5 +105,10 @@ public abstract class BounciumFluid extends FlowableFluid {
     @Override
     protected BlockState toBlockState(FluidState state) {
         return BCBlocks.BOUNCIUM.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+    }
+
+    @Override
+    public boolean matchesType(Fluid fluid) {
+        return fluid == getStill() || fluid == getFlowing();
     }
 }

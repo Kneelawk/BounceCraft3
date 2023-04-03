@@ -25,7 +25,9 @@
       "com.kneelawk.bouncecraft3.client.BounceCraft3ModClient"
     ]
   },
-  "mixins": [ ],
+  "mixins": [
+    "bouncecraft3.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.14.17",
