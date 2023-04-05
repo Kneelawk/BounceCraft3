@@ -1,3 +1,22 @@
 {
-  "item.bouncecraft3.bouncium_bucket": "Bouncium Bucket"
+  "block.bouncecraft3.white_bouncium_block": "White Bouncium Block",
+  "block.bouncecraft3.orange_bouncium_block": "Orange Bouncium Block",
+  "block.bouncecraft3.magenta_bouncium_block": "Magenta Bouncium Block",
+  "block.bouncecraft3.light_blue_bouncium_block": "Light Blue Bouncium Block",
+  "block.bouncecraft3.yellow_bouncium_block": "Yellow Bouncium Block",
+  "block.bouncecraft3.lime_bouncium_block": "Lime Bouncium Block",
+  "block.bouncecraft3.pink_bouncium_block": "Pink Bouncium Block",
+  "block.bouncecraft3.gray_bouncium_block": "Gray Bouncium Block",
+  "block.bouncecraft3.light_gray_bouncium_block": "Light Gray Bouncium Block",
+  "block.bouncecraft3.cyan_bouncium_block": "Cyan Bouncium Block",
+  "block.bouncecraft3.purple_bouncium_block": "Purple Bouncium Block",
+  "block.bouncecraft3.blue_bouncium_block": "Blue Bouncium Block",
+  "block.bouncecraft3.brown_bouncium_block": "Brown Bouncium Block",
+  "block.bouncecraft3.green_bouncium_block": "Green Bouncium Block",
+  "block.bouncecraft3.red_bouncium_block": "Red Bouncium Block",
+  "block.bouncecraft3.black_bouncium_block": "Black Bouncium Block",
+
+  "item.bouncecraft3.bouncium_bucket": "Bouncium Bucket",
+
+  "itemGroup.bouncecraft3.bounce_craft": "Bounce Craft 3"
 }
