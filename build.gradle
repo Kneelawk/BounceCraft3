@@ -12,7 +12,7 @@ repositories {
         url = "https://maven.alexiil.uk/"
     }
     maven {
-        name = "GerraformersMC"
+        name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/releases/"
     }
 }
