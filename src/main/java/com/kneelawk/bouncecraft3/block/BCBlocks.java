@@ -26,8 +26,8 @@ import static net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSetting
 public class BCBlocks {
     public static Block BOUNCIUM;
 
-    public static Block[] BOUNCIUM_BLOCKS = new Block[16];
-    public static Block[] BOUNCIUM_GLASSES = new Block[16];
+    public static Block[] BOUNCIUM_BLOCKS = new Block[DyeColor.values().length];
+    public static Block[] BOUNCIUM_GLASSES = new Block[DyeColor.values().length];
 
     public static void init() {
         BOUNCIUM = register(id("bouncium"),
