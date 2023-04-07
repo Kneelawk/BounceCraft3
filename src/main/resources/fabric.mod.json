@@ -33,6 +33,7 @@
     "fabricloader": ">=0.14.17",
     "fabric-api": "*",
     "libmultipart": "*",
+    "kmodlib-render": ">=0.1.0 <0.2.0-",
     "minecraft": "~1.19.4",
     "java": ">=17"
   },

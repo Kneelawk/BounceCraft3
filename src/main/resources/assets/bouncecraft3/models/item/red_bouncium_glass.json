@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "bouncecraft3:block/red_bouncium_glass_exterior_corners"
+  }
+}

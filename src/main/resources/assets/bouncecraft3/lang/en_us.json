@@ -16,6 +16,23 @@
   "block.bouncecraft3.red_bouncium_block": "Red Bouncium Block",
   "block.bouncecraft3.black_bouncium_block": "Black Bouncium Block",
 
+  "block.bouncecraft3.white_bouncium_glass": "White Bouncium Glass",
+  "block.bouncecraft3.orange_bouncium_glass": "Orange Bouncium Glass",
+  "block.bouncecraft3.magenta_bouncium_glass": "Magenta Bouncium Glass",
+  "block.bouncecraft3.light_blue_bouncium_glass": "Light Blue Bouncium Glass",
+  "block.bouncecraft3.yellow_bouncium_glass": "Yellow Bouncium Glass",
+  "block.bouncecraft3.lime_bouncium_glass": "Lime Bouncium Glass",
+  "block.bouncecraft3.pink_bouncium_glass": "Pink Bouncium Glass",
+  "block.bouncecraft3.gray_bouncium_glass": "Gray Bouncium Glass",
+  "block.bouncecraft3.light_gray_bouncium_glass": "Light Gray Bouncium Glass",
+  "block.bouncecraft3.cyan_bouncium_glass": "Cyan Bouncium Glass",
+  "block.bouncecraft3.purple_bouncium_glass": "Purple Bouncium Glass",
+  "block.bouncecraft3.blue_bouncium_glass": "Blue Bouncium Glass",
+  "block.bouncecraft3.brown_bouncium_glass": "Brown Bouncium Glass",
+  "block.bouncecraft3.green_bouncium_glass": "Green Bouncium Glass",
+  "block.bouncecraft3.red_bouncium_glass": "Red Bouncium Glass",
+  "block.bouncecraft3.black_bouncium_glass": "Black Bouncium Glass",
+
   "item.bouncecraft3.bouncium_bucket": "Bouncium Bucket",
 
   "itemGroup.bouncecraft3.bounce_craft": "Bounce Craft 3"
