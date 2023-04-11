@@ -6,6 +6,7 @@ import com.kneelawk.bouncecraft3.block.BCBlocks;
 import com.kneelawk.bouncecraft3.fluid.BCFluids;
 import com.kneelawk.bouncecraft3.item.BCItems;
 import com.kneelawk.bouncecraft3.misc.BCCreativeTabs;
+import com.kneelawk.bouncecraft3.part.BCParts;
 
 public class BounceCraft3Mod implements ModInitializer {
     @Override
@@ -13,6 +14,7 @@ public class BounceCraft3Mod implements ModInitializer {
         BCFluids.init();
         BCItems.init();
         BCBlocks.init();
+        BCParts.init();
         BCCreativeTabs.init();
     }
 }

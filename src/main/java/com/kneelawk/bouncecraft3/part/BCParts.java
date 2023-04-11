@@ -1,0 +1,18 @@
+package com.kneelawk.bouncecraft3.part;
+
+import static com.kneelawk.bouncecraft3.Constants.id;
+
+public class BCParts {
+    public static BouncePadDefinition[] BOUNCE_PADS = {
+        new BouncePadDefinition(id("low_bounce_pad"), 1.0, 0),
+        new BouncePadDefinition(id("medium_bounce_pad"), 2.0, 1),
+        new BouncePadDefinition(id("high_bounce_pad"), 3.0, 2),
+        new BouncePadDefinition(id("extreme_bounce_pad"), 5.0, 3)
+    };
+
+    public static void init() {
+        for (BouncePadDefinition definition : BOUNCE_PADS) {
+            definition.register();
+        }
+    }
+}

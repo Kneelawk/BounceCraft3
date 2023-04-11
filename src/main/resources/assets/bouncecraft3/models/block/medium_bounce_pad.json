@@ -1,0 +1,6 @@
+{
+  "parent": "bouncecraft3:block/pad",
+  "textures": {
+    "texture": "bouncecraft3:block/medium_bounce_pad"
+  }
+}

@@ -35,5 +35,10 @@
 
   "item.bouncecraft3.bouncium_bucket": "Bouncium Bucket",
 
+  "item.bouncecraft3.low_bounce_pad": "Low Bounce Pad",
+  "item.bouncecraft3.medium_bounce_pad": "Medium Bounce Pad",
+  "item.bouncecraft3.high_bounce_pad": "High Bounce Pad",
+  "item.bouncecraft3.extreme_bounce_pad": "Extreme Bounce Pad",
+
   "itemGroup.bouncecraft3.bounce_craft": "Bounce Craft 3"
 }
