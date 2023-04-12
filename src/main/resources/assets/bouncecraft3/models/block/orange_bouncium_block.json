@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "bouncecraft3:block/orange_bouncium_block"
-  }
-}

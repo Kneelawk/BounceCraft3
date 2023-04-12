@@ -1,0 +1,14 @@
+{
+  "type": "kmodlib-render:layered",
+  "layers": [
+    {
+      "type": "kmodlib-render:quarter_connected_texture",
+      "exterior_corners": "bouncecraft3:block/brown_bouncium_glass_exterior_corners",
+      "horizontal_edges": "bouncecraft3:block/brown_bouncium_glass_horizontal_edges",
+      "interior_corners": "bouncecraft3:block/brown_bouncium_glass_interior_corners",
+      "no_edges": "bouncecraft3:block/bouncium_glass_no_edges",
+      "vertical_edges": "bouncecraft3:block/brown_bouncium_glass_vertical_edges"
+    }
+  ],
+  "particle": "bouncecraft3:block/brown_bouncium_glass_exterior_corners"
+}

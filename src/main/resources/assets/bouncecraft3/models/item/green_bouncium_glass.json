@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "bouncecraft3:block/green_bouncium_glass_exterior_corners"
-  }
-}

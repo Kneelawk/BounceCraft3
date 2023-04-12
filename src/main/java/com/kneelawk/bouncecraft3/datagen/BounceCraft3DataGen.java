@@ -9,5 +9,6 @@ public class BounceCraft3DataGen implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(BCLootTableGen::new);
         pack.addProvider(BCTagGen::new);
+        pack.addProvider(BCBlockModelGen::new);
     }
 }
