@@ -23,6 +23,9 @@
     ],
     "client": [
       "com.kneelawk.bouncecraft3.client.BounceCraft3ModClient"
+    ],
+    "fabric-datagen": [
+      "com.kneelawk.bouncecraft3.datagen.BounceCraft3DataGen"
     ]
   },
   "mixins": [
