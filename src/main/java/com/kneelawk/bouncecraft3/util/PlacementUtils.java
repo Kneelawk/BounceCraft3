@@ -19,13 +19,18 @@ import alexiil.mc.lib.multipart.api.MultipartUtil;
 
 public class PlacementUtils {
     public static @Nullable MultipartContainer.PartOffer tryPlacePad(ItemUsageContext context,
-                                                                     Function<Direction, MultipartContainer.MultipartCreator> creatorFactory) {
+                                                                     Function<Direction, MultipartContainer.MultipartCreator> creatorFactory,
+                                                                     boolean respectEntityBBs) {
         World world = context.getWorld();
         BlockPos pos = context.getBlockPos();
         Direction side = context.getSide();
         BlockPos offsetPos = pos.offset(side);
 
-        return MultipartUtil.offerNewPart(world, offsetPos, creatorFactory.apply(side.getOpposite()));
+        MultipartContainer.PartOffer offer =
+            MultipartUtil.offerNewPart(world, pos, creatorFactory.apply(side), respectEntityBBs);
+        if (offer != null) return offer;
+
+        return MultipartUtil.offerNewPart(world, offsetPos, creatorFactory.apply(side.getOpposite()), respectEntityBBs);
     }
 
     public static void finishPlacement(ItemUsageContext context, @Nullable MultipartContainer.PartOffer offer,

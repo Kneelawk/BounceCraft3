@@ -33,7 +33,7 @@ public class BouncePadItem extends Item {
         }
 
         @Nullable MultipartContainer.PartOffer offer = PlacementUtils.tryPlacePad(context,
-            direction -> holder -> new BouncePadPart(definition, holder, direction));
+            direction -> holder -> new BouncePadPart(definition, holder, direction), false);
 
         PlacementUtils.finishPlacement(context, offer, Blocks.STONE.getDefaultState());
 
