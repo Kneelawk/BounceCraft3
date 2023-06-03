@@ -1,6 +1,7 @@
 plugins {
-    id 'fabric-loom' version '1.1-SNAPSHOT'
+    id 'fabric-loom'
     id 'maven-publish'
+    id 'io.github.juuxel.loom-quiltflower'
 }
 
 version = project.mod_version
@@ -66,13 +67,15 @@ dependencies {
     include "alexiil.mc.lib:libmultipart-all:${project.lmp_version}"
 
     // KModLib
-    modImplementation "com.kneelawk:kmodlib-render:${project.kmodlib_render_version}"
+    modImplementation "com.kneelawk:kmodlib-all:${project.kmodlib_render_version}"
     include "com.kneelawk:kmodlib-render:${project.kmodlib_render_version}"
 
     // Mod Menu
     modLocalRuntime "com.terraformersmc:modmenu:${project.mod_menu_version}"
     // EMI
-    modLocalRuntime "dev.emi:emi:${project.emi_version}"
+    if (project.emi_enabled.toBoolean()) {
+        modLocalRuntime "dev.emi:emi:${project.emi_version}"
+    }
 }
 
 processResources {
@@ -117,5 +120,11 @@ publishing {
         // Notice: This block does NOT have the same function as the block in the top level.
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
+    }
+}
+
+afterEvaluate {
+    tasks.named("genSources") {
+        dependsOn = ["genSourcesWithQuiltflower"]
     }
 }

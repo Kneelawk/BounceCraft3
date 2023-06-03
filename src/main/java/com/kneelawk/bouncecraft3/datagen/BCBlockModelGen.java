@@ -19,11 +19,11 @@ import net.minecraft.util.Identifier;
 
 import com.kneelawk.bouncecraft3.BCLog;
 import com.kneelawk.bouncecraft3.block.BCBlocks;
-import com.kneelawk.kmodlib.render.blockmodel.JsonMaterial;
-import com.kneelawk.kmodlib.render.blockmodel.KUnbakedModel;
-import com.kneelawk.kmodlib.render.blockmodel.UnbakedLayeredModel;
-import com.kneelawk.kmodlib.render.blockmodel.connector.ModelConnector;
-import com.kneelawk.kmodlib.render.blockmodel.ct.UnbakedCTLayer;
+import com.kneelawk.kmodlib.client.blockmodel.JsonMaterial;
+import com.kneelawk.kmodlib.client.blockmodel.KUnbakedModel;
+import com.kneelawk.kmodlib.client.blockmodel.UnbakedLayeredModel;
+import com.kneelawk.kmodlib.client.blockmodel.connector.ModelConnector;
+import com.kneelawk.kmodlib.client.blockmodel.ct.UnbakedCTLayer;
 
 import static com.kneelawk.bouncecraft3.Constants.id;
 
@@ -47,7 +47,7 @@ public class BCBlockModelGen extends FabricModelProvider {
 
     private void connectedTextureGlass(Block glass, BlockStateModelGenerator blockStateModelGenerator) {
         Identifier modelId = ModelIds.getBlockModelId(glass);
-        Identifier suffixedModelId = modelId.withSuffixedPath(".kr");
+        Identifier suffixedModelId = modelId.withSuffixedPath(".kml");
 
         Identifier ecTex = modelId.withSuffixedPath("_exterior_corners");
         Identifier heTex = modelId.withSuffixedPath("_horizontal_edges");

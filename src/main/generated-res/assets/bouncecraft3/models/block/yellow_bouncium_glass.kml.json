@@ -1,8 +1,8 @@
 {
-  "type": "kmodlib-render:layered",
+  "type": "kmodlib-blockmodel:layered",
   "layers": [
     {
-      "type": "kmodlib-render:quarter_connected_texture",
+      "type": "kmodlib-blockmodel:quarter_connected_texture",
       "exterior_corners": "bouncecraft3:block/yellow_bouncium_glass_exterior_corners",
       "horizontal_edges": "bouncecraft3:block/yellow_bouncium_glass_horizontal_edges",
       "interior_corners": "bouncecraft3:block/yellow_bouncium_glass_interior_corners",

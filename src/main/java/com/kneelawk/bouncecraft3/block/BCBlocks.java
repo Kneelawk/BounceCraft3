@@ -7,7 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.GlassBlock;
-import net.minecraft.block.Material;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
@@ -30,15 +30,15 @@ public class BCBlocks {
     public static Block[] BOUNCIUM_GLASSES = new Block[DyeColor.values().length];
 
     public static void init() {
-        BOUNCIUM = register(id("bouncium"),
-            new BounciumFluidBlock(BCFluids.BOUNCIUM, copyOf(Blocks.WATER)));
+        BOUNCIUM = register(id("bouncium"), new BounciumFluidBlock(BCFluids.BOUNCIUM, copyOf(Blocks.WATER)));
 
         final FabricBlockSettings bounciumBlocks =
-            FabricBlockSettings.of(Material.STONE).requiresTool().strength(1.5f, 6.0f);
+            FabricBlockSettings.create().requiresTool().strength(1.5f, 6.0f).instrument(Instrument.BASEDRUM)
+                .sounds(BlockSoundGroup.STONE);
         final FabricBlockSettings bounciumGlasses =
-            FabricBlockSettings.of(Material.GLASS).requiresTool().strength(0.3f).sounds(BlockSoundGroup.GLASS)
-                .nonOpaque().allowsSpawning(BCBlocks::never).solidBlock(BCBlocks::never).suffocates(BCBlocks::never)
-                .blockVision(BCBlocks::never);
+            FabricBlockSettings.create().requiresTool().strength(0.3f).instrument(Instrument.SNARE)
+                .sounds(BlockSoundGroup.GLASS).nonOpaque().allowsSpawning(BCBlocks::never).solidBlock(BCBlocks::never)
+                .suffocates(BCBlocks::never).blockVision(BCBlocks::never);
 
         for (DyeColor color : DyeColor.values()) {
             BOUNCIUM_BLOCKS[color.getId()] = registerWithItem(id(color.getName() + "_bouncium_block"),
