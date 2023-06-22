@@ -74,7 +74,7 @@ dependencies {
     modLocalRuntime "com.terraformersmc:modmenu:${project.mod_menu_version}"
     // EMI
     if (project.emi_enabled.toBoolean()) {
-        modLocalRuntime "dev.emi:emi:${project.emi_version}"
+        modLocalRuntime "dev.emi:emi-fabric:${project.emi_version}"
     }
 }
 
