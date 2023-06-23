@@ -9,11 +9,15 @@ import net.fabricmc.api.Environment;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 
@@ -134,10 +138,34 @@ public class BouncePadPart extends AbstractPart {
     }
 
     @Environment(EnvType.CLIENT)
+    private Identifier getTexture() {
+        return BouncePadBaker.BOUNCE_PADS[MathHelper.clamp(definition.renderIndex, 0, BouncePadBaker.BOUNCE_PADS.length)];
+    }
+
+    @Environment(EnvType.CLIENT)
     @Override
     protected void spawnBreakParticles() {
-        spawnBreakParticles(getClosestBlockState(),
-            BouncePadBaker.BOUNCE_PADS[MathHelper.clamp(definition.renderIndex, 0, BouncePadBaker.BOUNCE_PADS.length)]);
+        spawnBreakParticles(getClosestBlockState(), getTexture());
+    }
+
+    @Environment(EnvType.CLIENT)
+    @Override
+    public boolean spawnHitParticle(Direction side) {
+        spawnHitParticle(side, getClosestBlockState(), getTexture());
+        return true;
+    }
+
+    @Environment(EnvType.CLIENT)
+    @Override
+    public boolean spawnSprintParticle(Entity sprintingEntity, Random entityRandom) {
+        spawnSprintParticle(sprintingEntity, entityRandom, getClosestBlockState(), getTexture());
+        return true;
+    }
+
+    @Environment(EnvType.CLIENT)
+    @Override
+    protected void spawnFallParticles(Vec3d pos, int count) {
+        spawnFallParticles(pos, count, getClosestBlockState(), getTexture());
     }
 
     public static final class ModelKey extends PartModelKey {
