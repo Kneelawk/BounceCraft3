@@ -17,6 +17,7 @@ public class BCTagGen extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(BCBlocks.BOUNCIUM_BLOCKS).add(BCBlocks.BOUNCIUM_GLASSES);
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(BCBlocks.BOUNCIUM_BLOCKS).add(BCBlocks.BOUNCIUM_GLASSES)
+            .add(BCBlocks.BASE_BOUNCIUM_GRATE);
     }
 }

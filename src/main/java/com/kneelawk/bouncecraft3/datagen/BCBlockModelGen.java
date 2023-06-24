@@ -35,13 +35,14 @@ public class BCBlockModelGen extends FabricModelProvider {
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    public void generateBlockStateModels(BlockStateModelGenerator gen) {
         for (Block block : BCBlocks.BOUNCIUM_BLOCKS) {
-            blockStateModelGenerator.registerSimpleCubeAll(block);
+            gen.registerSimpleCubeAll(block);
         }
+        gen.registerSimpleCubeAll(BCBlocks.BASE_BOUNCIUM_GRATE);
 
         for (Block glass : BCBlocks.BOUNCIUM_GLASSES) {
-            connectedTextureGlass(glass, blockStateModelGenerator);
+            connectedTextureGlass(glass, gen);
         }
     }
 

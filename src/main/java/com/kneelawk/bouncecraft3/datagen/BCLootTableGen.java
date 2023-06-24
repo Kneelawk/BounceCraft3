@@ -20,5 +20,7 @@ public class BCLootTableGen extends FabricBlockLootTableProvider {
         for (Block block : BCBlocks.BOUNCIUM_GLASSES) {
             addDrop(block);
         }
+
+        addDrop(BCBlocks.BASE_BOUNCIUM_GRATE);
     }
 }

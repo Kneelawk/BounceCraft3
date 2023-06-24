@@ -20,5 +20,6 @@ public class BCBlocksClient {
             BCFluids.BOUNCIUM_FLOWING);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BCBlocks.BOUNCIUM_GLASSES);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BCBlocks.BASE_BOUNCIUM_GRATE);
     }
 }

@@ -1,4 +1,4 @@
-// 1.20 Release Candidate 1	2023-06-03T13:14:19.64808667	Bounce Craft 3/Block Loot Tables
+// 1.20.1	2023-06-23T23:16:24.980000193	Bounce Craft 3/Block Loot Tables
 fea339df88fb3bfc811b8e423742601173d1145b data/bouncecraft3/loot_tables/blocks/brown_bouncium_glass.json
 b774bfc96b9c30e1fac27605db494e79066c9220 data/bouncecraft3/loot_tables/blocks/pink_bouncium_block.json
 14391e8575fafea02d3adaaee1938aff5bd8e7f9 data/bouncecraft3/loot_tables/blocks/black_bouncium_block.json
@@ -15,6 +15,7 @@ a5cfc623c87d8a79f711b3cbebc06f639a4fce50 data/bouncecraft3/loot_tables/blocks/pi
 395b71348b35b0f1c5484936e1e9feb014a5dd51 data/bouncecraft3/loot_tables/blocks/cyan_bouncium_glass.json
 eab4e63f009ea4f9d25965ff88cd1ef15e02e871 data/bouncecraft3/loot_tables/blocks/gray_bouncium_glass.json
 0eed4ccdeb42a7d6eb1fd04ff176ff3b4ad6118d data/bouncecraft3/loot_tables/blocks/brown_bouncium_block.json
+6102c01143e469a1e27aec7a5a62e2ada34bca66 data/bouncecraft3/loot_tables/blocks/base_bouncium_grate.json
 08202a3150680ac3b2d5e98aae69957f109d798b data/bouncecraft3/loot_tables/blocks/light_gray_bouncium_block.json
 d84cb33ba9eb31aa4dd9c3ff20768d1a3ca5aa25 data/bouncecraft3/loot_tables/blocks/red_bouncium_block.json
 bb877214d412ca51a0edd9dc107b5434a5d1408d data/bouncecraft3/loot_tables/blocks/orange_bouncium_block.json

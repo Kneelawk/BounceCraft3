@@ -29,6 +29,8 @@ public class BCBlocks {
     public static Block[] BOUNCIUM_BLOCKS = new Block[DyeColor.values().length];
     public static Block[] BOUNCIUM_GLASSES = new Block[DyeColor.values().length];
 
+    public static Block BASE_BOUNCIUM_GRATE;
+
     public static void init() {
         BOUNCIUM = register(id("bouncium"), new BounciumFluidBlock(BCFluids.BOUNCIUM, copyOf(Blocks.WATER)));
 
@@ -49,6 +51,11 @@ public class BCBlocks {
             BOUNCIUM_GLASSES[color.getId()] = registerWithItem(id(color.getName() + "_bouncium_glass"),
                 new GlassBlock(copyOf(bounciumGlasses).mapColor(color)));
         }
+
+        BASE_BOUNCIUM_GRATE = registerWithItem(id("base_bouncium_grate"), new GrateBaseBlock(
+            FabricBlockSettings.create().requiresTool().strength(1.5f).instrument(Instrument.BANJO)
+                .sounds(BlockSoundGroup.STONE).nonOpaque().allowsSpawning(BCBlocks::never).solidBlock(BCBlocks::never)
+                .suffocates(BCBlocks::never).blockVision(BCBlocks::never)));
     }
 
     private static Block register(Identifier id, Block block) {
