@@ -25,6 +25,10 @@ public class BCCreativeTabs {
 
         entries.add(BCBlocks.BASE_BOUNCIUM_GRATE);
 
+        for (Item grate : BCItems.GRATES) {
+            entries.add(grate);
+        }
+
         for (Block block : BCBlocks.BOUNCIUM_BLOCKS) {
             entries.add(block);
         }

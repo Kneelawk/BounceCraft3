@@ -35,6 +35,11 @@
 
   "block.bouncecraft3.base_bouncium_grate": "Base Bouncium Grate",
 
+  "block.bouncecraft3.low_speed_grate": "Low Speed Grate",
+  "block.bouncecraft3.medium_speed_grate": "Medium Speed Grate",
+  "block.bouncecraft3.high_speed_grate": "High Speed Grate",
+  "block.bouncecraft3.extreme_speed_grate": "Extreme Speed Grate",
+
   "item.bouncecraft3.bouncium_bucket": "Bouncium Bucket",
 
   "item.bouncecraft3.low_bounce_pad": "Low Bounce Pad",

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "side": "bouncecraft3:block/low_speed_grate_side",
+    "bottom": "bouncecraft3:block/low_speed_grate_front",
+    "top": "bouncecraft3:block/low_speed_grate_back"
+  }
+}

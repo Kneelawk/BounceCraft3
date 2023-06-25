@@ -37,7 +37,7 @@ import com.kneelawk.bouncecraft3.util.BoxUtils;
 import com.kneelawk.bouncecraft3.util.MovementUtils;
 import com.kneelawk.bouncecraft3.util.RotationUtils;
 
-public class BouncePadPart extends AbstractPart {
+public class BouncePadPart extends AbstractPart implements SidePart {
     private static final VoxelShape[] CONFLICT_SHAPES = new VoxelShape[Direction.values().length];
     private static final VoxelShape[] OUTLINE_SHAPES = new VoxelShape[Direction.values().length];
 
@@ -166,6 +166,11 @@ public class BouncePadPart extends AbstractPart {
     @Override
     protected void spawnFallParticles(Vec3d pos, int count) {
         spawnFallParticles(pos, count, getClosestBlockState(), getTexture());
+    }
+
+    @Override
+    public Direction getSide() {
+        return side;
     }
 
     public static final class ModelKey extends PartModelKey {

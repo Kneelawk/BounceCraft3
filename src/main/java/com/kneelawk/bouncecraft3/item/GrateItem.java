@@ -11,14 +11,14 @@ import net.minecraft.world.World;
 
 import alexiil.mc.lib.multipart.api.MultipartContainer;
 
-import com.kneelawk.bouncecraft3.part.BouncePadDefinition;
-import com.kneelawk.bouncecraft3.part.BouncePadPart;
+import com.kneelawk.bouncecraft3.part.GrateDefinition;
+import com.kneelawk.bouncecraft3.part.GratePart;
 import com.kneelawk.bouncecraft3.util.PlacementUtils;
 
-public class BouncePadItem extends Item {
-    private final BouncePadDefinition definition;
+public class GrateItem extends Item {
+    private final GrateDefinition definition;
 
-    public BouncePadItem(BouncePadDefinition definition, Settings settings) {
+    public GrateItem(GrateDefinition definition, Settings settings) {
         super(settings);
         this.definition = definition;
 
@@ -32,8 +32,8 @@ public class BouncePadItem extends Item {
             return ActionResult.CONSUME;
         }
 
-        @Nullable MultipartContainer.PartOffer offer = PlacementUtils.tryPlacePad(context,
-            direction -> holder -> new BouncePadPart(definition, holder, direction), false);
+        @Nullable MultipartContainer.PartOffer offer = PlacementUtils.tryPlaceGrate(context,
+            direction -> holder -> new GratePart(definition, holder, direction), false);
 
         PlacementUtils.finishPlacement(context, offer, Blocks.STONE.getDefaultState());
 

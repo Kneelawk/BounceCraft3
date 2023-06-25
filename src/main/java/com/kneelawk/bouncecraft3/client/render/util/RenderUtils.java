@@ -6,6 +6,9 @@ import net.fabricmc.fabric.api.client.model.BakedModelManagerHelper;
 import net.fabricmc.fabric.api.renderer.v1.material.RenderMaterial;
 import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
 
+import org.joml.Vector2f;
+import org.joml.Vector3f;
+
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.BakedModelManager;
@@ -44,5 +47,25 @@ public class RenderUtils {
             to.fromVanilla(quad, material, null);
             to.emit();
         }
+    }
+
+    public static final Vector3f[][] facePoses = {
+        {vec3(0, 0, 1), vec3(0, 0, 0), vec3(1, 0, 0), vec3(1, 0, 1)},
+        {vec3(0, 1, 0), vec3(0, 1, 1), vec3(1, 1, 1), vec3(1, 1, 0)},
+        {vec3(1, 1, 0), vec3(1, 0, 0), vec3(0, 0, 0), vec3(0, 1, 0)},
+        {vec3(0, 1, 1), vec3(0, 0, 1), vec3(1, 0, 1), vec3(1, 1, 1)},
+        {vec3(0, 1, 0), vec3(0, 0, 0), vec3(0, 0, 1), vec3(0, 1, 1)},
+        {vec3(1, 1, 1), vec3(1, 0, 1), vec3(1, 0, 0), vec3(1, 1, 0)}
+    };
+
+    public static final Vector2f[] faceUVs = {
+        new Vector2f(0f, 0f),
+        new Vector2f(0f, 1f),
+        new Vector2f(1f, 1f),
+        new Vector2f(1f, 0f)
+    };
+
+    private static Vector3f vec3(double x, double y, double z) {
+        return new Vector3f((float) x, (float) y, (float) z);
     }
 }
