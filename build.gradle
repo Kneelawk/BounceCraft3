@@ -80,8 +80,8 @@ dependencies {
     include "alexiil.mc.lib:libmultipart-all:${project.lmp_version}"
 
     // KModLib
-    modImplementation "com.kneelawk:kmodlib-all:${project.kmodlib_render_version}"
-    include "com.kneelawk:kmodlib-render:${project.kmodlib_render_version}"
+    modImplementation "com.kneelawk:kmodlib-all:${project.kmodlib_version}"
+    include "com.kneelawk:kmodlib-all:${project.kmodlib_version}"
 
     // Mod Menu
     modLocalRuntime "com.terraformersmc:modmenu:${project.mod_menu_version}"
