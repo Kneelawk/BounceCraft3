@@ -1,10 +1,23 @@
+import com.modrinth.minotaur.dependencies.DependencyType
+import com.modrinth.minotaur.dependencies.ModDependency
+
 plugins {
     id 'fabric-loom'
     id 'maven-publish'
     id 'io.github.juuxel.loom-quiltflower'
+    id 'com.modrinth.minotaur'
+    id 'com.matthewprenger.cursegradle'
 }
 
-version = project.mod_version
+String releaseTag = System.getenv("RELEASE_TAG")
+if (releaseTag != null) {
+    project.version = releaseTag.substring(1)
+    println("Detected Release Version: " + project.version)
+} else {
+    project.version = project.mod_version
+    println("Detected Local Version: " + project.version)
+}
+
 group = project.maven_group
 
 base {
@@ -106,6 +119,51 @@ jar {
     }
 }
 
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = project.mr_project_id
+    versionNumber = project.version as String
+    versionType = project.mr_version_type
+    File changelogFile = file("changelogs/changelog-v${project.version}.md")
+    if (changelogFile.exists()) {
+        changelog = changelogFile.text
+    }
+    uploadFile = tasks.remapJar
+    additionalFiles.add(tasks.sourcesJar)
+    gameVersions.addAll(project.mr_game_versions.split("\\s*,\\s*"))
+    loaders.addAll(project.mr_loaders.split("\\s*,\\s*"))
+    dependencies.add(new ModDependency("P7dR8mSH", DependencyType.REQUIRED)) // Fabric API
+    syncBodyFrom = file("README.md").text
+}
+
+String curseApiKey = System.getenv("CURSE_API_KEY")
+if (curseApiKey != null) {
+    curseforge {
+        apiKey = curseApiKey
+        project {
+            id = project.cf_project_id
+            changelogType = "markdown"
+            changelog = file("changelogs/changelog-v${project.version}.md")
+            releaseType = project.cf_release_type
+            for (final def version in project.cf_minecraft_versions.split("\\s*,\\s*")) {
+                addGameVersion(version)
+            }
+            mainArtifact(tasks.remapJar)
+            addArtifact(tasks.sourcesJar)
+            relations {
+                requiredDependency("fabric-api")
+            }
+        }
+        options {
+            forgeGradleIntegration = false
+        }
+    }
+
+    afterEvaluate {
+        tasks.curseforge881218.dependsOn(tasks.remapJar)
+    }
+}
+
 // configure the maven publication
 publishing {
     publications {
@@ -116,10 +174,12 @@ publishing {
 
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
+        if (System.getenv("PUBLISH_REPO") != null) {
+            maven {
+                name = "publishRepo"
+                url = uri(System.getenv("PUBLISH_REPO"))
+            }
+        }
     }
 }
 

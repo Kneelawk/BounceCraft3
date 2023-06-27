@@ -10,5 +10,9 @@ pluginManagement {
     plugins {
         id 'fabric-loom' version settings.loom_version
         id 'io.github.juuxel.loom-quiltflower' version settings.loom_quiltflower_version
+        id 'com.modrinth.minotaur' version settings.minotaur_version
+        id 'com.matthewprenger.cursegradle' version settings.cursegradle_version
     }
 }
+
+rootProject.name = "bouncecraft3"
