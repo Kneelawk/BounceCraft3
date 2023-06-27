@@ -1,0 +1,3 @@
+Changes:
+
+* Tweaked CurseForge deployment.
