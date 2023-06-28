@@ -1,3 +1,4 @@
+import com.matthewprenger.cursegradle.CurseUploadTask
 import com.modrinth.minotaur.dependencies.DependencyType
 import com.modrinth.minotaur.dependencies.ModDependency
 
@@ -160,7 +161,12 @@ if (curseApiKey != null) {
     }
 
     afterEvaluate {
-        tasks.curseforge881218.dependsOn(tasks.remapJar)
+        tasks.named("curseforge881218", CurseUploadTask) {
+            dependsOn(tasks.remapJar)
+            doLast {
+                file("curse-file-id.txt").text = mainArtifact.fileID
+            }
+        }
     }
 }
 
