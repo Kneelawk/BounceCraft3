@@ -1,6 +1,6 @@
 # BounceCraft3
 
-This is the 3rd or 4th re-creation of my mod BounceCraft.
+[Modrinth](https://modrinth.com/mod/bouncecraft3)
 
 BounceCraft adds pads and grates that move entities and the player around, potentially very quickly. All of this is
 based around a new resource, called Bouncium, that generates in lakes around the world.
