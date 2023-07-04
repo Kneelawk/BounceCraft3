@@ -13,7 +13,7 @@ This mod is still in alpha and is missing a lot of features.
 * [x] Basic Grates.
 * [x] Speed Grates.
 * [x] Bouncium Fluid.
-* [ ] Block for Preventing Fall Damage.
+* [x] Block for Preventing Fall Damage.
 * [ ] Speed Pads.
 * [ ] Bouncium Lake Generation.
 * [ ] Recipes.
