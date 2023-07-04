@@ -29,6 +29,8 @@ public class BCCreativeTabs {
             entries.add(grate);
         }
 
+        entries.add(BCBlocks.KINETIC_ABSORBER);
+
         for (Block block : BCBlocks.BOUNCIUM_BLOCKS) {
             entries.add(block);
         }

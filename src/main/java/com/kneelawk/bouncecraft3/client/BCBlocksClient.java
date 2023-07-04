@@ -21,5 +21,6 @@ public class BCBlocksClient {
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BCBlocks.BOUNCIUM_GLASSES);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BCBlocks.BASE_BOUNCIUM_GRATE);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BCBlocks.KINETIC_ABSORBER);
     }
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2023-06-23T23:16:24.980000193	Bounce Craft 3/Block Loot Tables
+// 1.20.1	2023-07-04T08:52:46.348871176	Bounce Craft 3/Block Loot Tables
 fea339df88fb3bfc811b8e423742601173d1145b data/bouncecraft3/loot_tables/blocks/brown_bouncium_glass.json
 b774bfc96b9c30e1fac27605db494e79066c9220 data/bouncecraft3/loot_tables/blocks/pink_bouncium_block.json
 14391e8575fafea02d3adaaee1938aff5bd8e7f9 data/bouncecraft3/loot_tables/blocks/black_bouncium_block.json
@@ -21,6 +21,7 @@ d84cb33ba9eb31aa4dd9c3ff20768d1a3ca5aa25 data/bouncecraft3/loot_tables/blocks/re
 bb877214d412ca51a0edd9dc107b5434a5d1408d data/bouncecraft3/loot_tables/blocks/orange_bouncium_block.json
 a73996e49a88d20ebd87f2b87c549974f6101958 data/bouncecraft3/loot_tables/blocks/white_bouncium_block.json
 431e89f36911e9f7ff8b38934a8b9be1a4df9fe7 data/bouncecraft3/loot_tables/blocks/blue_bouncium_glass.json
+d89e4206cb8a405e73867192c489513714946d29 data/bouncecraft3/loot_tables/blocks/kinetic_absorber.json
 ef43433e8ad4562e109a5c2a769db5047fd44210 data/bouncecraft3/loot_tables/blocks/blue_bouncium_block.json
 64182c60e64d81041224173223f7c6a20609e9d2 data/bouncecraft3/loot_tables/blocks/white_bouncium_glass.json
 3ac9be41a031ade0abe4ae173cf3d7e73c728fcc data/bouncecraft3/loot_tables/blocks/cyan_bouncium_block.json
